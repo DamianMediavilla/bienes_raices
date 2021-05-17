@@ -10,9 +10,7 @@
     .anuncio{
         background-color: $grisOscuro;
         border: 1px solid $grisOscuro;
-        .iconos-caracteristicas img{
-            filter: invert(90%);
-        }
+       
         .precio{
             color: $verde ;
         }
@@ -31,5 +29,11 @@
             color: $blanco;
             border: 1px solid $grisOscuro;
         } 
+    }
+    .texto-nosotros blockquote{
+        color: $gris;
+    }
+    .iconos-caracteristicas img{
+        filter: invert(90%);
     }
 }

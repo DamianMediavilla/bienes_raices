@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="build/css/app.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header <?php echo isset($inicio) ? 'inicio' : ''; ?> ">
         <div class="contenedor contenido-header">
             <div class="barra">
                 <a href="/">
@@ -22,14 +22,14 @@
                     <img src="build/img/dark-mode.svg" alt="darkmode" class="dark-mode-boton">
 
                     <nav class="navegacion">
-                        <a href="nosotros.html">Nosotros</a>
-                        <a href="anuncios.html">Anuncios</a>
-                        <a href="blog.html">Blog</a>
-                        <a href="contacto.html">Contacto </a>
+                        <a href="nosotros.php">Nosotros</a>
+                        <a href="anuncios.php">Anuncios</a>
+                        <a href="blog.php">Blog</a>
+                        <a href="contacto.php">Contacto </a>
                     </nav>
                 </div>
                 
             </div>
-            
+            <?php  echo isset($inicio)? '<h1>Venta de casas y departamenteos exclusivos de lujo</h1>' : '' ; ?>
         </div>       
     </header>

@@ -10,9 +10,9 @@
                 </picture>
             </div>
             <div class="texto-entrada">
-                <a href="entrada.html">
+                <a href="entrada.php">
                     <h4>Guia para la decoracion de tu hogar</h4>
-                    <p>Escrito el: <span>20/20/2020</span> por: <span>Pepe</span></p>
+                    <p class="informacion-meta">Escrito el: <span>20/20/2020</span> por: <span>Pepe</span></p>
                     <p>consejos para construir una terraza en el techo de tucasa con buenos materiales y ahorrando dinero</p>
                 </a>
 
@@ -27,10 +27,10 @@
                 </picture>
             </div>
             <div class="texto-entrada">
-                <a href="entrada.html">
+                <a href="entrada.php">
                     <h4>Terraza en el techo de tu casa</h4>
-                    <p>escrito el: <span>20/20/2020</span> por: <span>Pepe</span></p>
-                    <p>consejos para construir una terraza en el techo de tucasa con buenos materiales y ahorrando dinero</p>
+                    <p class="informacion-meta">Escrito el: <span>20/20/2020</span> por: <span>Pepe</span></p>
+                    <p>Consejos para construir una terraza en el techo de tucasa con buenos materiales y ahorrando dinero</p>
                 </a>
 
             </div>
@@ -40,10 +40,10 @@
     <footer class="footer seccion">
         <div class="contenedor contenedor-footer">
             <nav class="navegacion">
-                <a href="nosotros.html">Nosotros</a>
-                <a href="anuncios.html">Anuncios</a>
-                <a href="blog.html">Blog</a>
-                <a href="contacto.html">Contacto </a>
+                <a href="nosotros.php">Nosotros</a>
+                <a href="anuncios.php">Anuncios</a>
+                <a href="blog.php">Blog</a>
+                <a href="contacto.php">Contacto </a>
             </nav>
 
         </div>

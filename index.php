@@ -1,39 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienes raices</title>
-    <link rel="stylesheet" href="build/css/app.css">
-</head>
-<body>
-    <header class="header inicio">
-        <div class="contenedor contenido-header">
-            <div class="barra">
-                <a href="/">
-                    <img src="build/img/logo.svg" alt="logo bienes raices">
-                </a>
-                <div class="mobile-menu">
-                    <img src="build/img/barras.svg" alt="menu movil">
-
-                </div>
-                <div class="derecha">
-                    <img src="build/img/dark-mode.svg" alt="darkmode" class="dark-mode-boton">
-
-                    <nav class="navegacion">
-                        <a href="nosotros.html">Nosotros</a>
-                        <a href="anuncios.html">Anuncios</a>
-                        <a href="blog.html">Blog</a>
-                        <a href="contacto.html">Contacto </a>
-                    </nav>
-                </div>
-                
-            </div>
-            <h1>Venta de casas y departamenteos exclusivos de lujo</h1>
-            
-        </div>       
-    </header>
+<?php 
+    $inicio=true;
+    include 'includes/templates/header.php'
+?>
     <main class="contenedor seccion">
         <h1>Más Sobre Nosotros</h1>
         <div class="iconos-nosotros">
@@ -85,7 +53,7 @@
                     </li>
 
                 </ul>
-                <a href="anuncio.html" class="boton boton-amarillo">Ver propiedad</a>
+                <a href="anuncio.php" class="boton boton-amarillo">Ver propiedad</a>
             </div>
             <div class="anuncio">
                 <picture>
@@ -113,7 +81,7 @@
                     </li>
 
                 </ul>
-                <a href="anuncio.html" class="boton boton-amarillo">Ver propiedad</a>
+                <a href="anuncio.php" class="boton boton-amarillo">Ver propiedad</a>
             </div>
             <div class="anuncio">
                 <picture>
@@ -141,11 +109,11 @@
                     </li>
 
                 </ul>
-                <a href="anuncio.html" class="boton boton-amarillo">Ver propiedad</a>
+                <a href="anuncio.php" class="boton boton-amarillo">Ver propiedad</a>
             </div>
         </div>
         <div class="ver-todas alinear-derecha">
-            <a href="anuncios.html" class="boton-verde">Ver todas</a>
+            <a href="anuncios.php" class="boton-verde">Ver todas</a>
 
         </div>
 
@@ -153,7 +121,7 @@
     <section class="imagen-contacto">
         <h2>Encuentra la casa de tus sueños</h2>
         <p>Llena el formulario de contacto y un asesor se pondra e contacto contigo</p>
-        <a href="contacto.html" class="boton-amarillo--nbl">Contactanos</a>
+        <a href="contacto.php" class="boton-amarillo--nbl">Contactanos</a>
 
 
     </section>
@@ -169,7 +137,7 @@
                      </picture>
                  </div>
                  <div class="texto-entrada">
-                     <a href="entrada.html">
+                     <a href="entrada.php">
                          <h4>Guia para la decoracion de tu hogar</h4>
                          <p class="informacion-meta">Escrito el: <span>20/20/2020</span> por: <span>Pepe</span></p>
                          <p>consejos para construir una terraza en el techo de tucasa con buenos materiales y ahorrando dinero</p>
@@ -186,7 +154,7 @@
                      </picture>
                  </div>
                  <div class="texto-entrada">
-                     <a href="entrada.html">
+                     <a href="entrada.php">
                          <h4>Terraza en el techo de tu casa</h4>
                          <p class="informacion-meta" >Escrito el: <span>20/20/2020</span> por: <span>Pepe</span></p>
                          <p>consejos para construir una terraza en el techo de tucasa con buenos materiales y ahorrando dinero</p>
@@ -207,10 +175,10 @@
     <footer class="footer seccion">
         <div class="contenedor contenedor-footer">
             <nav class="navegacion">
-                <a href="nosotros.html">Nosotros</a>
-                <a href="anuncios.html">Anuncios</a>
-                <a href="blog.html">Blog</a>
-                <a href="contacto.html">Contacto </a>
+                <a href="nosotros.php">Nosotros</a>
+                <a href="anuncios.php">Anuncios</a>
+                <a href="blog.php">Blog</a>
+                <a href="contacto.php">Contacto </a>
             </nav>
 
         </div>
