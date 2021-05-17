@@ -1,55 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienes raices</title>
-    <link rel="stylesheet" href="build/css/app.css">
-</head>
-<body>
-    <header class="header">
-        <div class="contenedor contenido-header">
-            <div class="barra">
-                <a href="/">
-                    <img src="build/img/logo.svg" alt="logo bienes raices">
-                </a>
-                <nav class="navegacion">
-                    <a href="nosotros.html">Nosotros</a>
-                    <a href="anuncios.html">Anuncios</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="contacto.html">Contacto </a>
-                </nav>
-                
-            </div>
-            
-        </div>
-        
-    </header>
-    <main class="contenedor seccion contenido-centrado">
-        <h1>Casa en venta frente al bosque</h1>
+<?php include 'includes/templates/header.php'; ?>
+    <main class="contenedor seccion">
+        <h1>Guia para la decoracion de tu hogar</h1>
+        <p class="informacion-meta">Escrito el: <span>20/20/2020</span> por: <span>Jeronimo Jeremias</span></p>
         <picture>
-            <source srcset="build/img/destacada.webp" type="image/webp"> 
-            <source srcset="build/img/destacada.jpg" type="image/jpg"> 
-            <img loading="lazy" src="build/img/destacada.jpg" alt="Imagen Destacada anuncio">
+            <source srcset="build/img/destacada2.webp" type="image/webp"> 
+            <source srcset="build/img/destacada2.jpg" type="image/jpg"> 
+            <img loading="lazy" src="build/img/destacada2.jpg" alt="Imagen Destacada anuncio">
         </picture>
         <div class="resumen-propiedad">
-            <p class="precio">$3.000.000</p>
-            <ul class="iconos-caracteristicas">
-                <li>
-                    <img src="build/img/icono_wc.svg" alt="váter">
-                    <p>4</p>
-                </li>
-                <li>
-                    <img src="build/img/icono_estacionamiento.svg" alt="garage">
-                    <p>2</p>
-                </li>
-                <li>
-                    <img src="build/img/icono_dormitorio.svg" alt="dormi">
-                    <p>6</p>
-                </li>
-
-            </ul>
+        
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis cum sint placeat ratione esse dolores consectetur veritatis quidem aperiam. Recusandae soluta aliquid ipsa omnis corrupti ex perspiciatis accusantium fuga unde!
             Rerum exercitationem nostrum illo distinctio, adipisci quis aperiam nobis voluptate illum harum, similique in deserunt sed porro libero voluptatem! Vel quam provident adipisci laborum veniam natus autem similique, doloremque dolore!
             A iusto totam accusantium deleniti ducimus aliquid sed commodi laboriosam numquam animi veniam possimus quaerat nihil voluptates rerum dolore magnam vel necessitatibus, soluta voluptas. Quidem dignissimos soluta distinctio pariatur vitae!
