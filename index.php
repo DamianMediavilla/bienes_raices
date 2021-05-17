@@ -121,7 +121,7 @@
     <section class="imagen-contacto">
         <h2>Encuentra la casa de tus sueños</h2>
         <p>Llena el formulario de contacto y un asesor se pondra e contacto contigo</p>
-        <a href="contacto.php" class="boton-amarillo--nbl">Contactanos</a>
+        <a href="contacto.php" class="boton-amarillo">Contactanos</a>
 
 
     </section>
@@ -172,20 +172,4 @@
         </section>
 
     </div>
-    <footer class="footer seccion">
-        <div class="contenedor contenedor-footer">
-            <nav class="navegacion">
-                <a href="nosotros.php">Nosotros</a>
-                <a href="anuncios.php">Anuncios</a>
-                <a href="blog.php">Blog</a>
-                <a href="contacto.php">Contacto </a>
-            </nav>
-
-        </div>
-        <p class="copyright">Todps los derechos reservados &copy</p>
-
-    </footer>
-</body>
-<script src="build/js/bundle.min.js"></script>
-
-</html>
+<?php include 'includes/templates/footer.php'; ?>
