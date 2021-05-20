@@ -1,4 +1,7 @@
-<?php include 'includes/templates/header.php'; ?>
+<?php 
+    require 'includes/funciones.php';
+    incluirTemplate("header");
+?>
     <main class="contenedor seccion">
         <h1>Guia para la decoracion de tu hogar</h1>
         <p class="informacion-meta">Escrito el: <span>20/20/2020</span> por: <span>Jeronimo Jeremias</span></p>
@@ -17,4 +20,4 @@
 
         </div>
     </main>
-<?php include 'includes/templates/footer.php'; ?>
+<?php incluirTemplate("footer"); ?>

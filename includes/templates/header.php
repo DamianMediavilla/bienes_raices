@@ -5,31 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienes raices</title>
-    <link rel="stylesheet" href="build/css/app.css">
+    <link rel="stylesheet" href="/build/css/app.css">
 </head>
 <body>
-    <header class="header <?php echo isset($inicio) ? 'inicio' : ''; ?> ">
+    <header class="header <?php echo $inicio ? 'inicio' : ''; ?> ">
         <div class="contenedor contenido-header">
             <div class="barra">
                 <a href="/">
-                    <img src="build/img/logo.svg" alt="logo bienes raices">
+                    <img src="/build/img/logo.svg" alt="logo bienes raices">
                 </a>
                 <div class="mobile-menu">
-                    <img src="build/img/barras.svg" alt="menu movil">
+                    <img src="/build/img/barras.svg" alt="menu movil">
 
                 </div>
                 <div class="derecha">
-                    <img src="build/img/dark-mode.svg" alt="darkmode" class="dark-mode-boton">
+                    <img src="/build/img/dark-mode.svg" alt="darkmode" class="dark-mode-boton">
 
                     <nav class="navegacion">
-                        <a href="nosotros.php">Nosotros</a>
-                        <a href="anuncios.php">Anuncios</a>
-                        <a href="blog.php">Blog</a>
-                        <a href="contacto.php">Contacto </a>
+                        <a href="/nosotros.php">Nosotros</a>
+                        <a href="/anuncios.php">Anuncios</a>
+                        <a href="/blog.php">Blog</a>
+                        <a href="/contacto.php">Contacto </a>
                     </nav>
                 </div>
                 
             </div>
-            <?php  echo isset($inicio)? '<h1>Venta de casas y departamenteos exclusivos de lujo</h1>' : '' ; ?>
+            <?php  echo $inicio ? '<h1>Venta de casas y departamenteos exclusivos de lujo</h1>' : '' ; ?>
         </div>       
     </header>
