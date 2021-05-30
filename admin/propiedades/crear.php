@@ -42,7 +42,7 @@
         $creado = date('Y/m/d');
         //Procesar imagen
         $imagen = $_FILES['imagen']; 
-        var_dump($imagen);
+        //var_dump($imagen);
 
 
         if (!$titulo){
@@ -103,7 +103,7 @@
             
             if($resultado){
                 //echo "Insercion correcta" . "<br>";
-                header('Location: /admin?res=1');
+                header('Location: /admin/?res=1');
             }
         }
         //exit;
@@ -127,7 +127,7 @@
 
     
 
-    <form action="" class="formulario" method="POST" action="/admin/propiedades/crear.php" enctype="multipart/form-data">
+    <form  class="formulario" method="POST" action="/admin/propiedades/crear.php" enctype="multipart/form-data">
         <fieldset>
             <legend>Información General</legend>
             <label for="titulo" >Titulo</label>

@@ -55,7 +55,7 @@
         $creado = date('Y/m/d');
         //Procesar imagen
         $imagen = $_FILES['imagen']; 
-        var_dump($imagen);
+        //var_dump($imagen);
 
 
         if (!$titulo){
@@ -79,9 +79,7 @@
         if (!$vendedor){
             $errores[] = "Debes añadir un vendedor";
         }
-        if(!$imagen['name']|| $imagen['error']){
-            $errores[] ="Debe insertar una imagen valida";
-        }
+       
 
         $tam= 1024*512; //cantidad de bytes (1024=1kb) 512kb
         if ($imagen['size']>$tam){
@@ -95,27 +93,38 @@
         var_dump($errores); 
         echo "</pre>"; */
         if (empty($errores)){
-            //* Subida de archivos
-
+            
             //Crear carpeta
             $carpetaImagenes = '../../imagenes_subidas/';
             if(!is_dir($carpetaImagenes)){
                 mkdir($carpetaImagenes);
             }
-            // generar nombre
-            $nombreImg = md5(uniqid(rand(),true)) . ".jpg";
-            //Subir imagen
-            move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . $nombreImg);
+
+            $nombreImg = '';
+
+            //* Subida de archivos
+            if($imagen['name']){
+                //elimanos imagen anterior
+                unlink($carpetaImagenes . $propiedad['imagen']);
+                // generar nombre de la nueva imagen
+                $nombreImg = md5(uniqid(rand(),true)) . ".jpg";
+                //Subir imagen
+                move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . $nombreImg);
+            }else{
+                $nombreImg  = $propiedad['imagen'];
+            }
+
 
 
 
             //insercion BD
-            $query = " INSERT INTO propiedades (titulo, precio, imagen, descripcion, habitaciones, toilet, garage, creado, vendedorId)  VALUES ( '$titulo', '$precio', '$nombreImg', '$descripcion', '$habitaciones', '$toilet', '$garage', '$creado', '$vendedor' )";
-            //echo $query;
+            $query = " UPDATE propiedades  SET titulo = '$titulo', precio = '$precio', descripcion = '$descripcion', habitaciones = '$habitaciones', toilet = '$toilet', garage = '$garage', vendedorId = '$vendedor', imagen = '$nombreImg' WHERE idProp = $id";
+            echo $query;
             $resultado= mysqli_query($db, $query);
+            echo $resultado;
             if($resultado){
                 //echo "Insercion correcta" . "<br>";
-                header('Location: /admin?res=1');
+                header('Location: /admin/?res=2');
             }
         }
         //exit;
@@ -139,7 +148,7 @@
 
     
 
-    <form action="" class="formulario" method="POST" action="/admin/propiedades/crear.php" enctype="multipart/form-data">
+    <form action="" class="formulario" method="POST"  enctype="multipart/form-data">
         <fieldset>
             <legend>Información General</legend>
             <label for="titulo" >Titulo</label>
@@ -147,7 +156,7 @@
             <label for="precio" >Precio</label>
             <input type="number" id="precio" name="precio" placeholder="Precio Propiedad" value="<?php echo($precio); ?>">
             <label for="imagen" >Imagen</label>
-            <input type="file" id="imagen" accept="image/jpeg, image/png" name="imagen">
+            <input type="file" id="imagen" accept="image/jpeg, image/png" name="imagen">  
             <img src="/imagenes_subidas/<?php echo $imagenPropiedad; ?>" alt="imagen propiedad" class="imagen-chica">
             <label for="descripcion">Descripcion</label>
             <textarea name="descripcion"  id="descripcion" cols="30" rows="10"><?php echo $descripcion; ?></textarea>

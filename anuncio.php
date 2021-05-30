@@ -1,36 +1,45 @@
 <?php 
     require 'includes/funciones.php';
     incluirTemplate("header");
+
+    $id=$_GET['id'];
+    $id=filter_var($id, FILTER_VALIDATE_INT);
+    if(!$id){
+        header('Location: /'); 
+    }
+    //conectar DB
+    require 'includes/config/database.php';
+    $db =conectarDB();
+    //consultar
+    $query = "SELECT * FROM propiedades WHERE idProp = $id";
+    $consulta = mysqli_query($db, $query);
+    $propiedad = mysqli_fetch_assoc($consulta);
+    /* if($propiedad->num_rows ===0){
+        header('Location: /'); 
+    } */
+
 ?>
     <main class="contenedor seccion contenido-centrado">
-        <h1>Casa en venta frente al bosque</h1>
-        <picture>
-            <source srcset="build/img/destacada.webp" type="image/webp"> 
-            <source srcset="build/img/destacada.jpg" type="image/jpg"> 
-            <img loading="lazy" src="build/img/destacada.jpg" alt="Imagen Destacada anuncio">
-        </picture>
+        <h1><?php echo $propiedad['titulo']; ?></h1>
+        <img loading="lazy" src="/imagenes_subidas/<?php echo $propiedad['imagen']; ?>" alt="Imagen Destacada anuncio">
         <div class="resumen-propiedad">
-            <p class="precio">$3.000.000</p>
+            <p class="precio">$<?php echo $propiedad['precio']; ?></p>
             <ul class="iconos-caracteristicas">
                 <li>
                     <img src="build/img/icono_wc.svg" alt="váter">
-                    <p>4</p>
+                    <p><?php echo $propiedad['toilet']; ?></p>
                 </li>
                 <li>
                     <img src="build/img/icono_estacionamiento.svg" alt="garage">
-                    <p>2</p>
+                    <p><?php echo $propiedad['garage']; ?></p>
                 </li>
                 <li>
                     <img src="build/img/icono_dormitorio.svg" alt="dormi">
-                    <p>6</p>
+                    <p><?php echo $propiedad['habitaciones']; ?></p>
                 </li>
 
             </ul>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis cum sint placeat ratione esse dolores consectetur veritatis quidem aperiam. Recusandae soluta aliquid ipsa omnis corrupti ex perspiciatis accusantium fuga unde!
-            Rerum exercitationem nostrum illo distinctio, adipisci quis aperiam nobis voluptate illum harum, similique in deserunt sed porro libero voluptatem! Vel quam provident adipisci laborum veniam natus autem similique, doloremque dolore!
-            A iusto totam accusantium deleniti ducimus aliquid sed commodi laboriosam numquam animi veniam possimus quaerat nihil voluptates rerum dolore magnam vel necessitatibus, soluta voluptas. Quidem dignissimos soluta distinctio pariatur vitae!
-            Nesciunt quia error dolore. Aliquid debitis placeat harum cupiditate ipsam id excepturi, ullam ducimus eos odit molestias dolor aut fugit hic accusantium earum voluptatibus quod maxime sequi et, esse nostrum.
-            Consequuntur nostrum ipsa laboriosam maxime enim atque incidunt, necessitatibus modi provident obcaecati quasi repellendus ullam voluptas quaerat praesentium adipisci, facilis, saepe nulla officia sunt asperiores illo. Quam dolor saepe cupiditate.</p>
+            <p><?php echo $propiedad['descripcion']; ?></p>
 
         </div>
     </main>
