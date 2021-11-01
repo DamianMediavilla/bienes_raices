@@ -5,11 +5,12 @@
                 <a href="/anuncios.php">Anuncios</a>
                 <a href="/blog.php">Blog</a>
                 <a href="/contacto.php">Contacto </a>
+               
             </nav>
 
         </div>
         
-        <p class="copyright">Todps los derechos reservados <?php echo date('Y'); ?> &copy</p>
+        <p class="copyright">Todos los derechos reservados <?php echo date('Y'); ?> &copy</p>
 
     </footer>
 </body>
