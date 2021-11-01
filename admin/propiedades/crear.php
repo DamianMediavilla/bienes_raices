@@ -1,4 +1,11 @@
 <?php 
+    //autenticacion
+    require '../../includes/funciones.php';
+    $auth = estaAutenticado();
+
+    if (!$auth){
+        header('Location: /');
+    }
     //base datos, conexion
     require '../../includes/config/database.php';
     $db=conectarDB();
@@ -7,7 +14,7 @@
     $consulta_vendedores = "SELECT * from vendedores";
     $resultado_vendedores = mysqli_query($db, $consulta_vendedores);
 
-    require '../../includes/funciones.php';
+   
     incluirTemplate("header");
 
     //arreglo mensaje de eerror
